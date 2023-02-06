@@ -1,28 +1,29 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+import Document, { Head, Html, Main, NextScript } from "next/document";
 
-class MyDocument extends Document {
+export default class MyDocument extends Document {
   render() {
     return (
-      <Html lang="pt-br">
+      <Html lang="pt-BR">
         <Head>
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
             rel="stylesheet"
           />
-          <meta charSet="utf-8" />
-          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-          <link rel="shortcut icon" href="/react.png" type="image/x-icon" />
+          <link rel="shortcut icon" href="code.png" type="image/x-icon" />
         </Head>
-
         <body>
           <Main />
           <NextScript />
+          <script
+            async
+            defer
+            src="https://static.cdn.prismic.io/prismic.js?new=true&repo=spacetraveling2"
+          />
         </body>
       </Html>
     );
   }
 }
-
-export default MyDocument;
