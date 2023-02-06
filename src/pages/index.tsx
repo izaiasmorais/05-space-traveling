@@ -1,3 +1,5 @@
+import Head from "next/head";
+import Header from "../components/Header";
 // import { GetStaticProps } from "next";
 
 // import { getPrismicClient } from "../services/prismic";
@@ -25,7 +27,17 @@
 // }
 
 export default function Home(): JSX.Element {
-  return <div>Hello world</div>;
+  return (
+    <>
+      <Head>
+        <title>Space Traveling</title>
+      </Head>
+
+      <div>
+        <Header />
+      </div>
+    </>
+  );
 }
 
 // export function getStaticProps(): GetStaticProps {
